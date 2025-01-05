@@ -1,0 +1,391 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Hobbies - NURSYAF World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/beige-paper.png');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #4b3f30;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #d3bfa4;
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      background: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png') no-repeat center;
+      background-size: cover;
+      color: white;
+      padding: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .section {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 2px dashed #d3bfa4;
+      border-radius: 10px;
+      background-color: #f9f5ee;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .gallery-item {
+      width: 200px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .gallery-item img {
+      width: 200px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .gallery-item p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #4b3f30;
+      font-style: italic;
+    }
+
+    .gallery-item audio {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .audio-gallery-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .audio-gallery-item img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .description {
+      margin-top: 20px;
+      text-align: justify;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .home-button {
+      display: block;
+      width: 100px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #4b3f30;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: #d3bfa4;
+    }
+
+    .social-media {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .social-media a {
+      margin: 0 10px;
+      color: #4b3f30;
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    .social-media a img {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-media a img:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .email {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      padding: 10px;
+      background-color: #f4e6d7;
+      color: #4b3f30;
+      font-size: 14px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #4b3f30;
+    }
+
+    ol {
+      padding-left: 20px;
+      text-align: left; /* Ensure that the ordered list aligns to the left */
+    }
+
+    /* Custom Marker for Hobbies List */
+    .custom-list {
+      list-style-type: none; /* Remove default numbering */
+      padding-left: 0;
+      text-align: left; /* Ensure the text is aligned to the left */
+    }
+
+    .custom-list li {
+      position: relative;
+      font-size: 18px;
+      line-height: 1.8;
+      padding-left: 30px;
+    }
+
+    .custom-list li::before {
+      content: '🍪'; /* Custom marker */
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 24px;
+      line-height: 1.6;
+    }
+
+    /* Styling the Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #d3bfa4;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      background-color: #f9f5ee;
+    }
+
+    th {
+      background-color: #d3bfa4;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="home-button">HOME</a>
+
+    <h1>MY HOBBIES</h1>
+
+    <div class="section">
+      <h2>My Hobbies List:</h2>
+      <ul class="custom-list">
+        <li>Baking delicious cakes and cookies</li>
+        <li>Exploring new music genres</li>
+        <li>Exploring new video on YouTube</li>
+        <li>Reading novels and Wattpad stories</li>
+      </ul>
+
+      
+      <!-- Start of Table -->
+      <h3>Hobbies Details:</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Hobby</th>
+            <th>Description</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Baking</td>
+            <td>Creating sweet treats and desserts for family and friends.</td>
+            <td>Weekend</td>
+          </tr>
+          <tr>
+            <td>Music</td>
+            <td>Listening to various music genres to relax and stay motivated.</td>
+            <td>30 minutes</td>
+          </tr>
+          <tr>
+            <td>YouTube</td>
+            <td>Watching to various video genres to relax and stay motivated.</td>
+            <td>30 minutes</td>
+          </tr>
+          <tr>
+            <td>Reading</td>
+            <td>Exploring different genres and stories to expand knowledge and imagination.</td>
+            <td>1-2 hours</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- End of Table -->
+
+    </div>
+
+
+    <div class="section">
+      <h2>Baking</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/chocolate chip.jpg" alt="Baking cookies">
+          <p>"Baking cookies brings warmth to the heart."</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/kek batik.jpg" alt="Decorating cakes">
+          <p>"The art of decorating cakes is my passion."</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/tart cadbury.jpg" alt="Pastries">
+          <p>"Every pastry tells a story."</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/nestum cookies.jpg" alt="Cupcakes">
+          <p>"Cupcakes are little bundles of joy."</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/puding roti.jpg" alt="Baking tools">
+          <p>"Tools of the trade make baking fun."</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/chip chocolate.jpg" alt="Freshly baked bread">
+          <p>"Nothing beats the aroma of fresh bread."</p>
+        </div>
+      </div>
+      <p class="description">
+        I love spending time in the kitchen, creating delicious treats for my family and friends. Baking is not just a hobby but a form of art that allows me to express my creativity.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Favorite Songs</h2>
+      <div class="audio-gallery-item">
+        <img src="images/Wildflower.png" alt="Favorite Song 1">
+        <div>
+          <p>"Song 1: The melody that speaks to my soul."</p>
+          <audio controls>
+            <source src="audio/Billie Eilish - WILDFLOWER.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+      <div class="audio-gallery-item">
+        <img src="images/fiq7.jpg" alt="Favorite Song 2">
+        <div>
+          <p>"Song 2: A rhythm that keeps me going."</p>
+          <audio controls>
+            <source src="audio/Lakaran Sebuah kisah.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+      <p class="description">
+        Music is a universal language that resonates deeply within me. These songs are my go-to tracks for inspiration and relaxation.
+      </p>  
+    </div>
+
+    <div class="section">
+      <h2>Favorite YouTube Channel</h2>
+      <div class="description" style="text-align: center;">
+        <p>Click below to visit my favorite YouTube channel:</p>
+        <a href="https://www.youtube.com/@ShazzZainuddin" target="_blank">
+          <button style="padding: 10px 20px; background-color: #FF0000; color: white; border: none; font-size: 18px; cursor: pointer; border-radius: 5px;">
+            Go to YouTube Channel
+          </button>
+        </a>
+      </div>
+      <p class="description" style="text-align: center;">
+        I love watching YouTube channels that inspire creativity, offer entertainment, and provide educational content. This channel is one of my favorites for learning new things and having fun.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Favorite Stories</h2>
+      <div class="gallery" style="justify-content: center;">
+        <div class="gallery-item">
+          <img src="images/novel rose's.jpg" alt="Nurissa Rose">
+          <p>"Nurissa Rose: A tale of resilience and love."</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/wattpad story.jpg" alt="Raja Qayder Ghazi">
+          <p>"Raja Qayder Ghazi: An epic of adventure and courage."</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="social-media">
+      <a href="https://www.instagram.com/ieqanabihah_/profilecard/?igsh=MW5vZWl4cWNwMXNobw==" target="_blank">
+        <img src="images/instagram-new.png" alt="Instagram" width="30">
+      </a>
+      <a href="https://www.tiktok.com/@nsyfqahn_?_t=8sZDV7wJjrW&_r=1" target="_blank">
+        <img src="images/tiktok.png" alt="TikTok" width="30">
+      </a>
+      <a href="https://x.com/syafiqhhpiqaa?t=BPnzjENU1sJIkWMx9R55hw&s=09" target="_blank">
+        <img src="images/X logo.png" alt="X" width="30">
+      </a>
+    </div>
+
+    <div class="email">
+      <p>Email: <a href="mailto:nursyafiqahnabihah0504@gmail.com">nursyafiqahnabihah0504@gmail.com</a></p>
+    </div>
+
+  </div>
+  <footer>
+    <p>&copy; 2024 NURSYAF World. All rights reserved.</p>
+  </footer>
+</body>
+</html>
